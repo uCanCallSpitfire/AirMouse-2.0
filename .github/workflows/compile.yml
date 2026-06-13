@@ -1,0 +1,23 @@
+name: Yazılımı derle
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu indir
+        uses: actions/checkout@v4
+
+      - name: Arduino CLI'yi kur
+        uses: arduino/setup-arduino-cli@v2
+        with:
+          version: "1.x"
+
+      - name: ESP32-C3 yazılımını derle
+        run: arduino-cli compile --profile esp32c3 .

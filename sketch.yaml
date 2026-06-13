@@ -1,0 +1,11 @@
+profiles:
+  esp32c3:
+    fqbn: esp32:esp32:nologo_esp32c3_super_mini
+    platforms:
+      - platform: esp32:esp32 (3.3.2)
+        platform_index_url: https://espressif.github.io/arduino-esp32/package_esp32_index.json
+    libraries:
+      - NimBLE-Arduino (2.3.4)
+      - MPU6050_light (1.2.1)
+
+default_profile: esp32c3

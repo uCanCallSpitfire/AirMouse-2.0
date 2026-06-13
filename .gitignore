@@ -1,0 +1,11 @@
+.build/
+build/
+build_debug/
+.arduinoIDE/
+.vscode/
+*.bin
+*.elf
+*.hex
+*.map
+*.log
+*.tmp
